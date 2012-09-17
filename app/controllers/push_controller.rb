@@ -3,7 +3,7 @@ class PushController < ApplicationController
 	def create
 
 		# save the raw data to the log table
-		log = PostLog.new
+		log = PushLog.new
 		log.data = params[:payload]
 		log.save!
 
