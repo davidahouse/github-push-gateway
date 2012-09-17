@@ -10,5 +10,9 @@ class PushController < ApplicationController
 		# also save this to redis so any client can pick it up
 
 	end
+
+	def index
+		
+	end
 	
 end
