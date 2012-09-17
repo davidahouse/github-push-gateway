@@ -9,8 +9,8 @@ class PushController < ApplicationController
 
 		# also save this to redis so any client can pick it up
 		uri = URI.parse(ENV["REDISTOGO_URL"])
-		REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-		REDIS.lpush("incoming",params[:payload])
+		r = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+		r.lpush("incoming",params[:payload])
 	end
 
 	def index
