@@ -1,6 +1,6 @@
 class PushController < ApplicationController
 
-	def new
+	def create
 
 		# save the raw data to the log table
 		log = PostLog.new
@@ -12,7 +12,7 @@ class PushController < ApplicationController
 	end
 
 	def index
-		
+
 	end
 	
 end
