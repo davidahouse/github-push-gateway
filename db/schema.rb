@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120917112633) do
+ActiveRecord::Schema.define(:version => 20120917114616) do
 
   create_table "push_logs", :force => true do |t|
-    t.string   "data"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "data",       :limit => 255
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
 end
